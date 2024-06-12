@@ -1,0 +1,89 @@
+.Proyectos{
+    width: 85%;
+    height: auto;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 8vh 0;
+}
+
+h2 {
+    background: linear-gradient(270deg, #2c3e9a, #b53349);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.cards{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.cards .card {
+    width: 300px;
+    height: auto;
+    border: 2px solid #5b2d7c;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: all 0.2s ease-in-out;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+}
+
+.cards .card:hover {
+   transform: translateY(-3px);
+   -webkit-transform: translateY(-3px);
+   -moz-transform: translateY(-3px);
+   -ms-transform: translateY(-3px);
+   -o-transform: translateY(-3px);
+}
+
+.cards .card img{
+    border-radius: 6px 6px 0  0;
+    -webkit-border-radius: 6px 6px 0  0;
+    -moz-border-radius: 6px 6px 0  0;
+    -ms-border-radius: 6px 6px 0  0;
+    -o-border-radius: 6px 6px 0  0;
+}
+
+.cards .card h3{
+    text-align: center;
+    color: antiquewhite;
+}
+
+.cards .card p{
+    padding: 0 10px;
+    font-weight: 600;
+}
+
+.cards .card .tecno{
+    padding: 0 10px;
+}
+
+.cards .card .github{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards .card .github img {
+    filter: invert(16%) sepia(56%) saturate(3664%) hue-rotate(255deg) brightness(94%) contrast(86%);
+}
+
+@media (max-width: 900px){
+    .Proyectos{
+        padding-bottom:16vh ;
+    }
+}

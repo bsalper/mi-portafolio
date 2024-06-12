@@ -1,0 +1,11 @@
+.footer {
+  background: linear-gradient(90deg, rgb(40, 32, 45), rgb(56, 53, 59));
+  color: #ecf0f1;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.footer a {
+  color: #ecf0f1;
+  text-decoration: none;
+}
