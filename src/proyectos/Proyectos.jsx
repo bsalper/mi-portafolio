@@ -7,6 +7,8 @@ import python from '../assets/python.svg'
 import js from '../assets/js.svg'
 import php from '../assets/php.svg'
 import boot from '../assets/bootstrap.svg'
+import csharp from '../assets/csharp.svg'
+import img from '../assets/Construccion.jpg'
 
 const Proyectos = () => {
     const tarjetas = [
@@ -24,6 +26,14 @@ const Proyectos = () => {
           descrip:'Este proyecto realiza un análisis y visualización de datos de ventas de una tiendita utilizando datos ficticios.',
           tecno:[python],
           url:'https://github.com/bsalper/AnalisisPython.git',
+        },
+
+        {
+          image:[img],
+          name:'Manejo de Presupuesto',
+          descrip:'Este proyecto va a ser una aplicación de manejo de presupuesto, donde podrás autenticarte, registrar tus ingresos y gastos. Además se ofrecerá una herramienta de reporteria.',
+          tecno:[csharp],
+          url:'https://github.com/bsalper/ManejoPresupuesto.git',
         }
       ]
 
