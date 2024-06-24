@@ -1,5 +1,5 @@
 import styles from '../about/About.module.css'
-import perfil from '../assets/perfil.jpeg'
+import perfil from '../assets/perfil.png'
 
 const About = () => {
     return (
