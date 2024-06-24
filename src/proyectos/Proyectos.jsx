@@ -6,7 +6,7 @@ import html from '../assets/html.svg'
 import python from '../assets/python.svg'
 import js from '../assets/js.svg'
 import php from '../assets/php.svg'
-import boot from '../assets/bootstrap.svg'
+import css from '../assets/css.svg'
 import csharp from '../assets/csharp.svg'
 import img from '../assets/Construccion.jpg'
 
@@ -16,7 +16,7 @@ const Proyectos = () => {
           image:[img2],
           name:'CRUD con PHP',
           descrip:'Este proyecto es una aplicación CRUD (Crear, Leer, Actualizar, Eliminar) desarrollada en PHP que permite el registro de usuarios.',
-          tecno:[php,html,js,boot],
+          tecno:[php,html,js],
           url:'https://github.com/bsalper/crudphp.git',
         },
   
@@ -32,7 +32,7 @@ const Proyectos = () => {
           image:[img],
           name:'Manejo de Presupuesto',
           descrip:'Este proyecto va a ser una aplicación de manejo de presupuesto, donde podrás autenticarte, registrar tus ingresos y gastos. Además se ofrecerá una herramienta de reporteria.',
-          tecno:[csharp],
+          tecno:[csharp,html,js,css],
           url:'https://github.com/bsalper/ManejoPresupuesto.git',
         }
       ]
