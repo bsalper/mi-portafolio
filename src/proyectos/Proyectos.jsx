@@ -8,7 +8,7 @@ import js from '../assets/js.svg'
 import php from '../assets/php.svg'
 import css from '../assets/css.svg'
 import csharp from '../assets/csharp.svg'
-import img from '../assets/Construccion.jpg'
+import img from '../assets/ManejoPresupuesto.png'
 
 const Proyectos = () => {
     const tarjetas = [
@@ -31,7 +31,7 @@ const Proyectos = () => {
         {
           image:[img],
           name:'Manejo de Presupuesto',
-          descrip:'Este proyecto va a ser una aplicación de manejo de presupuesto, donde podrás autenticarte, registrar tus ingresos y gastos. Además se ofrecerá una herramienta de reporteria.',
+          descrip:'Esta aplicación permite a los usuarios registrar sus ingresos y gastos, y generar reportes financieros para tener un mejor control de sus finanzas personales.',
           tecno:[csharp,html,js,css],
           url:'https://github.com/bsalper/ManejoPresupuesto.git',
         }
