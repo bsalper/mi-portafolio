@@ -1,25 +1,15 @@
 import styles from '../proyectos/Proyectos.module.css'
-import img2 from '../assets/CRUD.png'
 import img3 from '../assets/Figure_3.png'
 import github from '../assets/github.svg'
 import html from '../assets/html.svg'
 import python from '../assets/python.svg'
 import js from '../assets/js.svg'
-import php from '../assets/php.svg'
 import css from '../assets/css.svg'
 import csharp from '../assets/csharp.svg'
 import img from '../assets/ManejoPresupuesto.png'
 
 const Proyectos = () => {
     const tarjetas = [
-        {
-          image:[img2],
-          name:'CRUD con PHP',
-          descrip:'Este proyecto es una aplicación CRUD (Crear, Leer, Actualizar, Eliminar) desarrollada en PHP que permite el registro de usuarios.',
-          tecno:[php,html,js],
-          url:'https://github.com/bsalper/crudphp.git',
-        },
-  
         {
           image:[img3],
           name:'Análisis y visualización con Python',

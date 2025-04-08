@@ -1,5 +1,5 @@
 import styles from '../about/About.module.css'
-import perfil from '../assets/perfil.png'
+import perfil from '../assets/perfil.jpeg'
 
 const About = () => {
     return (
@@ -22,6 +22,12 @@ const About = () => {
             <div className={styles.edu}>
 
                 <h2>Experiencia</h2>
+
+                <div>
+                    <h3>Desarrollador Programador</h3>
+                    <h4>Escuela de Investigaciones</h4>
+                    <h5>Ago 2024 - Al Presente</h5>
+                </div>
 
                 <div>
                     <h3>Analista Programador Junior</h3>
