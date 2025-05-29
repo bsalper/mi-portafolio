@@ -1,5 +1,5 @@
 import styles from '../about/About.module.css'
-import perfil from '../assets/perfil.jpeg'
+import perfil from '../assets/perfil.png'
 
 const About = () => {
     return (
@@ -24,7 +24,7 @@ const About = () => {
                 <h2>Experiencia</h2>
 
                 <div>
-                    <h3>Desarrollador Programador</h3>
+                    <h3>Desarrollador C#</h3>
                     <h4>Escuela de Investigaciones</h4>
                     <h5>Ago 2024 - Al Presente</h5>
                 </div>
