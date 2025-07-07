@@ -8,10 +8,9 @@ const About = () => {
                 <div className={styles.img}>
                     <img src={perfil} alt="" />
                 </div>
-                <p>Con experiencia en análisis de datos, soporte técnico y desarrollo de sitios web.
-                    Amplios conocimientos en lenguajes de programación. Experiencia con SQL para consultas y
-                    manipulación de bases de datos relacionales. Habilidades en el desarrollo de sitios web utilizando Vite,
-                    React y CSS.</p>
+                <p>Con enfoque en análisis de datos, apasionado por transformar información en decisiones estratégicas. 
+                    Experiencia en desarrollo web y automatización de procesos. Curioso, autodidacta y siempre en busca de 
+                    soluciones innovadoras.</p>
                 <div className={styles.adornos}>
                 <div></div>
                 <div></div>
