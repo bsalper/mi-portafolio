@@ -7,10 +7,9 @@ const Inicio = () => {
         <section id='inicio' className={styles.Inicio}>
             <AnimacionFondo/>
             <article className={styles.full}>
-                <h1>Ingeniero Informático</h1>
-                <p>Apasionado por el universo y las tecnologias. Me cautiva cómo la tecnología puede transformar nuestras vidas
-                    y resolver problemas de manera innovadora, es por ello que siempre estoy aprendiendo.
-                    Además de buscar nuevas técnicas para mejorar mi rapidez y eficiencia.</p>
+                <h1>Hola, soy Ingeniero Informático</h1>
+                <p>Me mueven la curiosidad, el universo y la tecnología.  
+                    Transformo ideas en soluciones digitales con eficiencia, creatividad y pasión por seguir aprendiendo cada día.</p>
                 <div className={styles.adornos}>
                 <div></div>
                 <div></div>
