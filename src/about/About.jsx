@@ -25,7 +25,7 @@ const About = () => {
                 <div>
                     <h3>Desarrollador C#</h3>
                     <h4>Escuela de Investigaciones</h4>
-                    <h5>Ago 2024 - Al Presente</h5>
+                    <h5>Ago 2024 - Jun 2025</h5>
                 </div>
 
                 <div>
