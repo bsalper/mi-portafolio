@@ -1,4 +1,4 @@
-.Proyectos{
+.Proyectos {
     width: 85%;
     height: auto;
     margin: auto;
@@ -9,18 +9,19 @@
 
 h2 {
     background: linear-gradient(270deg, #2c3e9a, #b53349);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-align: center;
-  margin-bottom: 30px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    margin-bottom: 30px;
 }
 
-.cards{
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-  justify-content: center;
-  gap: 40px;
-  width: 100%;
+.cards {
+    display: grid;
+    /* Ajusta automáticamente las columnas según el espacio */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-content: center;
+    gap: 40px;
+    width: 100%;
 }
 
 .cards .card {
@@ -29,138 +30,129 @@ h2 {
     border-radius: 7px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    transition: all 0.2s ease-in-out;
-    -webkit-border-radius: 7px;
-    -moz-border-radius: 7px;
-    -ms-border-radius: 7px;
-    -o-border-radius: 7px;
-    -webkit-transition: all 0.2s ease-in-out;
-    -moz-transition: all 0.2s ease-in-out;
-    -ms-transition: all 0.2s ease-in-out;
-    -o-transition: all 0.2s ease-in-out;
     background-color: rgba(0, 0, 0, 0.2);
-}
-
-.cardText {
-    padding: 0 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.cards .card p {
-    flex-grow: 1; /* ¡Este es el truco! */
-    font-weight: 600;
-    margin: 0;
-}
-
-.cardContent {
-    flex-grow: 1; 
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    transition: transform 0.2s ease-in-out;
+    overflow: hidden; /* Evita que la imagen se salga de los bordes redondeados */
 }
 
 .cards .card:hover {
-   transform: translateY(-3px);
-   -webkit-transform: translateY(-3px);
-   -moz-transform: translateY(-3px);
-   -ms-transform: translateY(-3px);
-   -o-transform: translateY(-3px);
+    transform: translateY(-3px);
 }
 
-.cards .card img{
-    border-radius: 6px 6px 0  0;
-    -webkit-border-radius: 6px 6px 0  0;
-    -moz-border-radius: 6px 6px 0  0;
-    -ms-border-radius: 6px 6px 0  0;
-    -o-border-radius: 6px 6px 0  0;
+.cards .card img {
+    border-radius: 6px 6px 0 0;
+    object-fit: cover; /* Para que las imágenes no se deformen */
 }
 
-.cards .card h3{
-    text-align: center;
-    color: antiquewhite;
-}
-
-.cards .card p{
-    padding: 0 10px;
-    font-weight: 600;
-}
-
-.cards .card .tecno{
+/* Contenedor de Título y Párrafo */
+.cardText {
     padding: 15px 10px;
     display: flex;
+    flex-direction: column;
     gap: 10px;
-    justify-content: flex-start;
-    min-height: 45px;
+    flex-grow: 1; /* Esto empuja el footer hacia abajo */
 }
 
+.cards .card h3 {
+    text-align: center;
+    color: antiquewhite;
+    margin: 0;
+}
+
+.cards .card p {
+    font-weight: 600;
+    margin: 0;
+    color: #ccc; /* Un gris claro para mejor lectura */
+    line-height: 1.4;
+}
+
+/* Contenedor de Tecnologías y GitHub */
 .cardFooter {
-    margin-top: auto;
+    margin-top: auto; /* Ancla al fondo */
     display: flex;
     flex-direction: column;
 }
 
-.cards .card .github{
+.tecno {
+    padding: 15px 10px;
+    display: flex;
+    gap: 12px;
+    justify-content: flex-start;
+    min-height: 45px;
+    align-items: center;
+}
+
+.github {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 15px;
     border-top: 1px solid rgba(91, 45, 124, 0.3);
-    position: relative;
 }
 
-.cards .card .github img {
+.github img {
+    /* Filtro para que el logo de GitHub sea purpura/azul */
     filter: invert(16%) sepia(56%) saturate(3664%) hue-rotate(255deg) brightness(94%) contrast(86%);
+    transition: filter 0.3s ease;
 }
 
-@media (max-width: 900px){
-    .Proyectos{
-        padding-bottom:16vh ;
-    }
+.github img:hover {
+    filter: none; /* Vuelve al color original al pasar el mouse */
 }
 
-/* 1. Contenedor del icono: DEBE ser relativo */
+/* --- TOOLTIP LOGIC --- */
+
 .tooltipContainer {
-  position: relative;
-  display: inline-block;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-/* 2. El texto del Tooltip: DEBE estar oculto por defecto */
 .tooltipText {
-  visibility: hidden; /* Esto lo esconde */
-  opacity: 0;         /* Esto lo hace transparente */
-  position: absolute;
-  bottom: 125%;       /* Lo posiciona arriba del icono */
-  left: 50%;
-  transform: translateX(-50%); /* Lo centra perfectamente */
-  
-  /* Diseño del globo */
-  background-color: #5b2d7c; 
-  color: #fff;
-  padding: 5px 10px;
-  border-radius: 5px;
-  white-space: nowrap; /* Evita que el texto se rompa en dos líneas */
-  font-size: 12px;
-  z-index: 10;
-  transition: opacity 0.3s ease; /* Efecto suave al aparecer */
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    bottom: 130%; /* Un poco más arriba del icono */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #5b2d7c;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 5px;
+    white-space: nowrap;
+    font-size: 12px;
+    font-weight: bold;
+    z-index: 100;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
 }
 
-/* 3. El Triangulito (opcional, para que parezca globo) */
+/* Triangulito */
 .tooltipText::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #5b2d7c transparent transparent transparent;
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #5b2d7c transparent transparent transparent;
 }
 
-/* 4. LA MAGIA: Mostrar al pasar el mouse */
 .tooltipContainer:hover .tooltipText {
-  visibility: visible;
-  opacity: 1;
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(-50%) translateY(-5px); /* Pequeño salto hacia arriba */
+}
+
+/* --- RESPONSIVE --- */
+
+@media (max-width: 900px) {
+    .Proyectos {
+        padding-bottom: 16vh;
+    }
+    .cards {
+        gap: 20px;
+    }
 }
