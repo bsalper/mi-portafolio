@@ -38,15 +38,18 @@ const Proyectos = () => {
     // 2. Función auxiliar para nombres de tooltips limpios
     const getTechName = (path) => {
         if (!path) return "Tecnología";
-        const name = path.split('/').pop().split('.')[0];
-        const names = {
-            'csharp': 'C#',
-            'js': 'JavaScript',
-            'html': 'HTML5',
-            'css': 'CSS3',
-            'python': 'Python'
-        };
-        return names[name] || name.charAt(0).toUpperCase() + name.slice(1);
+        
+        // Convertimos a minúsculas para comparar fácil
+        const lowerPath = path.toLowerCase();
+
+        if (lowerPath.includes('python')) return 'Python';
+        if (lowerPath.includes('csharp')) return 'C#';
+        if (lowerPath.includes('js')) return 'JavaScript';
+        if (lowerPath.includes('html')) return 'HTML5';
+        if (lowerPath.includes('css')) return 'CSS3';
+        
+        // Si no encuentra ninguna de las anteriores, intenta limpiar lo que haya
+        return "Tecnología";
     };
 
     // 3. Renderizado de la sección
