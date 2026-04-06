@@ -1,0 +1,163 @@
+.Inicio{
+    display: flex;
+    width: 85%;
+    height: 92vh;
+    margin: auto;
+    grid-template-columns: 65% 35%;
+    justify-content: center;
+    align-items: center;
+}
+
+h1, h2 {
+    background: linear-gradient(270deg, #2c3e9a, #b53349);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 3rem;
+}
+
+.full{
+    z-index: 9;
+    max-width: 720px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.full h1{
+    font-size: 3rem;
+}
+
+.full p{
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing:1px;
+}
+
+p{
+    color: antiquewhite;
+}
+
+.full .adornos{
+    display: flex;
+    gap: 5px;
+}
+
+.full .adornos div {
+    background: linear-gradient(270deg, #1b275e, #7f2331);
+    display: flex;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.botones{
+    max-width: 420px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+}
+
+.botones h2{
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+
+.botones div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.botones div a {
+    color: antiquewhite;
+    width: 140px;
+    height: 45px;
+    text-decoration: none;
+    font-size: 1.3rem;
+    border: 2px solid #5b2d7c;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    -webkit-transition:all 0.2s ease-in-out;
+    -moz-transition:all 0.2s ease-in-out;
+    -ms-transition:all 0.2s ease-in-out;
+    -o-transition:all 0.2s ease-in-out;
+}
+
+.botones div a:hover{
+    transition:all 0.2s ease-in-out;
+    background: linear-gradient(270deg, #2c3e9a, #b53349);
+    color: black;
+    -webkit-transition:all 0.2s ease-in-out;
+    -moz-transition:all 0.2s ease-in-out;
+    -ms-transition:all 0.2s ease-in-out;
+    -o-transition:all 0.2s ease-in-out;
+}
+
+@media (max-width: 900px){
+    .Inicio{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .full{
+        height: auto;
+    }
+
+    .botones{
+        height: 95vh;
+    }
+
+}
+
+.starsContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background-color: #fff;
+    border-radius: 50%;
+    animation: twinkle 2s linear infinite;
+}
+
+@keyframes twinkle {
+    0% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+}
