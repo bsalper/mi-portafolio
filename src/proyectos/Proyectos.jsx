@@ -6,10 +6,11 @@ import python from '../assets/python.svg'
 import js from '../assets/js.svg'
 import css from '../assets/css.svg'
 import csharp from '../assets/csharp.svg'
-import img2 from '../assets/Pipeline.jpeg'
+import img2 from '../assets/Pipeline.jpeg' // Asegúrate de tener esta imagen en assets
 import img from '../assets/ManejoPresupuesto.png'
 
 const Proyectos = () => {
+    // 1. Datos de las tarjetas (Centralizados)
     const tarjetas = [
         {
           image: img3,
@@ -32,47 +33,68 @@ const Proyectos = () => {
           tecno: [python],
           url: 'https://github.com/bsalper/odoo_analytics.git',
         }
-      ]
+    ];
 
-      return (
+    // 2. Función auxiliar para nombres de tooltips limpios
+    const getTechName = (path) => {
+        if (!path) return "Tecnología";
+        const name = path.split('/').pop().split('.')[0];
+        const names = {
+            'csharp': 'C#',
+            'js': 'JavaScript',
+            'html': 'HTML5',
+            'css': 'CSS3',
+            'python': 'Python'
+        };
+        return names[name] || name.charAt(0).toUpperCase() + name.slice(1);
+    };
+
+    // 3. Renderizado de la sección
+    return (
         <section id='proyectos' className={styles.Proyectos}>
             <h2>Proyectos</h2>
             <div className={styles.cards}>
                 {
-                  tarjetas.map((card, index) => {
-                    return (
-                      <div key={index} className={styles.card}>
-                        <div className={styles.img}>
-                          <img width='100%' height='250px' src={card.image} alt={card.name} />
-                        </div>
-
-                        {/* 1. Bloque de Texto (Título y Descrip) */}
-                        <div className={styles.cardText}>
-                            <h3>{card.name}</h3>
-                            <p>{card.descrip}</p>
-                        </div>
-
-                        {/* 2. Bloque de Pie (Tecnologías y GitHub) */}
-                        <div className={styles.cardFooter}>
-                            <div className={styles.tecno}>
-                              {card.tecno.map((icono, i) => (
-                                <img key={i} width='30px' src={icono} alt="tecnología" />
-                              ))}
-                            </div>
-
-                            <div className={styles.github}>
-                              <a href={card.url} target="_blank" rel="noopener noreferrer">
-                                <img width='30px' src={github} alt="ver en GitHub" />
-                              </a>
-                            </div>
-                        </div>
+                  tarjetas.map((card, index) => (
+                    <div key={index} className={styles.card}>
+                      {/* Imagen de portada */}
+                      <div className={styles.img}>
+                        <img width='100%' height='250px' src={card.image} alt={card.name} />
                       </div>
-                    )
-                  })
+
+                      {/* Bloque de Texto (Título y Descrip) */}
+                      <div className={styles.cardText}>
+                          <h3>{card.name}</h3>
+                          <p>{card.descrip}</p>
+                      </div>
+
+                      {/* Bloque de Pie (Tecnologías y GitHub) */}
+                      <div className={styles.cardFooter}>
+                          <div className={styles.tecno}>
+                            {card.tecno.map((icono, i) => (
+                              // AQUÍ ES DONDE VA EL TOOLTIP, DENTRO DEL MAP
+                              <div key={i} className={styles.tooltipContainer}>
+                                <img width='30px' src={icono} alt="tecnología" />
+                                <span className={styles.tooltipText}>{getTechName(icono)}</span>
+                              </div>
+                            ))}
+                          </div>
+
+                          <div className={styles.github}>
+                            <div className={styles.tooltipContainer}>
+                              <a href={card.url} target="_blank" rel="noopener noreferrer">
+                                <img width='30px' src={github} alt="GitHub" />
+                              </a>
+                              <span className={styles.tooltipText}>Ir al repositorio</span>
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+                  ))
                 }
             </div>
         </section>
-      )
-}
+    );
+};
 
 export default Proyectos;

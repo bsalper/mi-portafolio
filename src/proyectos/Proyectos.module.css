@@ -108,6 +108,7 @@ h2 {
     align-items: center;
     padding: 15px;
     border-top: 1px solid rgba(91, 45, 124, 0.3);
+    position: relative;
 }
 
 .cards .card .github img {
@@ -118,4 +119,48 @@ h2 {
     .Proyectos{
         padding-bottom:16vh ;
     }
+}
+
+/* 1. Contenedor del icono: DEBE ser relativo */
+.tooltipContainer {
+  position: relative;
+  display: inline-block;
+}
+
+/* 2. El texto del Tooltip: DEBE estar oculto por defecto */
+.tooltipText {
+  visibility: hidden; /* Esto lo esconde */
+  opacity: 0;         /* Esto lo hace transparente */
+  position: absolute;
+  bottom: 125%;       /* Lo posiciona arriba del icono */
+  left: 50%;
+  transform: translateX(-50%); /* Lo centra perfectamente */
+  
+  /* Diseño del globo */
+  background-color: #5b2d7c; 
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  white-space: nowrap; /* Evita que el texto se rompa en dos líneas */
+  font-size: 12px;
+  z-index: 10;
+  transition: opacity 0.3s ease; /* Efecto suave al aparecer */
+}
+
+/* 3. El Triangulito (opcional, para que parezca globo) */
+.tooltipText::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #5b2d7c transparent transparent transparent;
+}
+
+/* 4. LA MAGIA: Mostrar al pasar el mouse */
+.tooltipContainer:hover .tooltipText {
+  visibility: visible;
+  opacity: 1;
 }
