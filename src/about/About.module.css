@@ -9,11 +9,12 @@
     grid-template-columns: repeat(auto-fill,minmax(22rem, 1fr));
 }
 
-.SobreMi .intro{
+.SobreMi .intro {
     z-index: 9;
     display: flex;
     flex-direction: column;
-    gap: 35px;
+    gap: 25px;
+    height: auto;
 }
 
 .SobreMi .intro .img {
@@ -31,9 +32,10 @@
     -o-border-radius: 50%;
 }
 
-.SobreMi .intro p{
-  font-size: 1.2rem;
-  font-weight: 600;
+.SobreMi .intro p {
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1.6;
 }
 
 .SobreMi .intro .adornos div{
@@ -61,17 +63,20 @@
     color: antiquewhite;
 }
 
-.SobreMi .edu div{
+.SobreMi .edu div {
     min-width: 310px;
     border: 2px solid #5b2d7c;
     border-radius: 10px;
-    width: 80%;
-    height: 80px;
+    width: 100%;
+    height: auto;
+    min-height: 80px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center ;
+    align-items: center;
     gap: 8px;
+    padding: 15px;
+    text-align: center;
 }
 
 .SobreMi .edu div:hover{
@@ -86,6 +91,7 @@
     margin-top: 10px;
 }
 .logrosList li {
+    color: antiquewhite;
     margin-bottom: 8px;
     position: relative;
     padding-left: 15px;
@@ -101,9 +107,11 @@
 
 @media (max-width: 900px){
 
-    .SobreMi{
+    .SobreMi {
         height: auto;
-        padding-bottom:16vh ;
+        padding-top: 5vh;
+        padding-bottom: 10vh;
+        gap: 3rem;
     }
     .SobreMi .intro .img img{
         width: 200px;
@@ -113,11 +121,11 @@
     .SobreMi .intro{
         justify-content: center;
         align-items: center;
-        height: 95vh;
     }
 
     .SobreMi .intro p{
-        width: 290px;
+        width: 100%;
+        max-width: 400px;
     }
 
     

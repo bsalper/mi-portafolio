@@ -11,14 +11,14 @@ const About = () => {
                 
                 <div className={styles.textoSobreMi}>
                     <p>
-                        A lo largo de mi trayectoria, he pasado de desarrollar portales institucionales a orquestar ecosistemas de datos complejos. Mi enfoque se centra en <strong>identificar ineficiencias operativas y transformarlas en soluciones digitales rentables.</strong>
+                        <strong>Lo que aporto:</strong>
                     </p>
                     
                     <p>En el último año he logrado:</p>
                     <ul className={styles.logrosList}>
-                        <li><strong>Optimización de costos:</strong> Migré sistemas limitados hacia arquitecturas propias en React, eliminando gastos de licencias externas.</li>
-                        <li><strong>Automatización al 100%:</strong> Implementé pipelines de datos comerciales que eliminan la carga manual y garantizan reportes en tiempo real.</li>
-                        <li><strong>Digitalización en terreno:</strong> Desarrollé herramientas que redujeron drásticamente el tiempo de respuesta en ventas y operaciones.</li>
+                        <li><strong>Ingeniería de Datos:</strong> Diseño y orquestación de pipelines ETL automatizados desde ERPs (Odoo) hacia BigQuery, permitiendo análisis críticos para Control de Gestión.</li>
+                        <li><strong>Desarrollo Full-Stack:</strong>  Creación de aplicaciones escalables con React y Supabase que resuelven problemas reales del día a día operativo.</li>
+                        <li><strong>Automatización: </strong> Implementación de flujos de trabajo eficientes mediante GitHub Actions para garantizar la integridad y disponibilidad de la información.</li>
                     </ul>
                 </div>
 

@@ -1,11 +1,11 @@
-.Inicio{
+.Inicio {
     display: flex;
     width: 85%;
-    height: 92vh;
+    min-height: 92vh;
     margin: auto;
-    grid-template-columns: 65% 35%;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    gap: 2rem;
 }
 
 h1, h2 {
@@ -15,23 +15,26 @@ h1, h2 {
   font-size: 3rem;
 }
 
-.full{
+.full {
     z-index: 9;
     max-width: 720px;
-    height: 200px;
+    height: auto;
     display: flex;
     flex-direction: column;
     gap: 20px;
+    padding: 20px 0;
 }
 
 .full h1{
-    font-size: 3rem;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    line-height: 1.2;
 }
 
-.full p{
+.full p {
     font-size: 1.2rem;
-    font-weight: 700;
-    letter-spacing:1px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    line-height: 1.6;
 }
 
 p{
@@ -111,15 +114,16 @@ p{
 }
 
 @media (max-width: 900px){
-    .Inicio{
-        display: flex;
+    .Inicio {
         flex-direction: column;
+        text-align: center;
         justify-content: center;
-        align-items: center;
+        padding: 10vh 0;
+        height: auto;
     }
 
-    .full{
-        height: auto;
+    .full {
+        align-items: center;
     }
 
     .botones{
