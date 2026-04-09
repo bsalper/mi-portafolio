@@ -1,23 +1,30 @@
 import styles from '../proyectos/Proyectos.module.css'
-import img3 from '../assets/Figure_3.png'
+import img3 from '../assets/reporte.png'
 import github from '../assets/github.svg'
 import html from '../assets/html.svg'
 import python from '../assets/python.svg'
 import js from '../assets/js.svg'
 import css from '../assets/css.svg'
 import csharp from '../assets/csharp.svg'
-import img2 from '../assets/Pipeline.jpeg' // Asegúrate de tener esta imagen en assets
+import img2 from '../assets/Pipeline.png' // Asegúrate de tener esta imagen en assets
 import img from '../assets/ManejoPresupuesto.png'
 
 const Proyectos = () => {
     // 1. Datos de las tarjetas (Centralizados)
     const tarjetas = [
         {
-          image: img3,
-          name: 'Análisis y visualización con Python',
-          descrip: 'Este proyecto realiza un análisis y visualización de datos de ventas de una tiendita utilizando datos ficticios.',
+          image: img2,
+          name: 'Pipeline de Datos',
+          descrip: 'Este proyecto implementa un pipeline de datos (ETL) que extrae información comercial desde Odoo ERP, la procesa mediante Python y la carga automáticamente en Google BigQuery para su visualización en BI.',
           tecno: [python],
-          url: 'https://github.com/bsalper/AnalisisPython.git',
+          url: 'https://github.com/bsalper/odoo_analytics.git',
+        },
+        {
+          image: img3,
+          name: 'Reporte: Checklist y Limpieza Camiones',
+          descrip: 'Este proyecto es una interfaz administrativa desarrollada en React y Material UI para visualizar, filtrar y auditar los checklists realizados por los operarios de transporte. Permite la revisión detallada de estados críticos (motor, neumáticos, luces) y la visualización de evidencias fotográficas.',
+          tecno: [html, js, css],
+          url: 'https://github.com/bsalper/resultados_encuesta.git',
         },
         {
           image: img,
@@ -25,14 +32,8 @@ const Proyectos = () => {
           descrip: 'Esta aplicación permite a los usuarios registrar sus ingresos y gastos, y generar reportes financieros para tener un mejor control de sus finanzas personales.',
           tecno: [csharp, html, js, css],
           url: 'https://github.com/bsalper/ManejoPresupuesto.git',
-        },
-        {
-          image: img2,
-          name: 'Pipeline de Datos',
-          descrip: 'Este proyecto implementa un pipeline de datos (ETL) que extrae información comercial desde Odoo ERP, la procesa mediante Python y la carga automáticamente en Google BigQuery para su visualización en BI.',
-          tecno: [python],
-          url: 'https://github.com/bsalper/odoo_analytics.git',
         }
+        
     ];
 
     // 2. Función auxiliar para nombres de tooltips limpios
