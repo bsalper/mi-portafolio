@@ -8,8 +8,8 @@ const Inicio = () => {
             <AnimacionFondo/>
             <article className={styles.full}>
                 <h1>Hola! Soy Bastian, Ingeniero Informático</h1>
-                <p>Me apasiona la tecnología, la creatividad y descubrir nuevas formas de innovar. 
-                    Transformo ideas en soluciones digitales con eficiencia, curiosidad y un enfoque humano.</p>
+                <p>Apasionado por transformar datos brutos en decisiones estratégicas y digitalizar procesos operativos para
+                    maximizar la eficiencia. Mi enfoque combina el desarrollo de software robusto con la ingeniería de datos a escala.</p>
                 <div className={styles.adornos}>
                 <div></div>
                 <div></div>

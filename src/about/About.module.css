@@ -80,6 +80,25 @@
     color: black;
 }
 
+.logrosList {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 10px;
+}
+.logrosList li {
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 15px;
+    font-size: 0.95rem; /* O el tamaño que prefieras */
+}
+/* Un pequeño detalle cian para los puntos */
+.logrosList li::before {
+    content: "•";
+    color: #00cfd5; /* Cambia al color de tu tema */
+    position: absolute;
+    left: 0;
+}
+
 @media (max-width: 900px){
 
     .SobreMi{
