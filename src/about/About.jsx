@@ -33,7 +33,7 @@ const About = () => {
                 <h2>Experiencia</h2>
 
                 <div className={styles.experienciaItem}>
-                    <h3>Analista de Soporte Corporativo</h3>
+                    <h3>Ingeniero de Datos | Soporte TI</h3>
                     <h4>Moving Food</h4>
                     <h5>Oct 2025 - Actualidad</h5>
                 </div>
